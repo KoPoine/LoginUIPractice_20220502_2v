@@ -10,13 +10,44 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        val id = "admin"
+        val password = "asdf"
 
-        signUpBtn.setOnClickListener { 
-            Log.d("MainActivity_회원가입", "버튼 클릭됨")
-        }
-        
-        loginBtn.setOnClickListener {
-            Toast.makeText(this, "로그인을 환영합니다.", Toast.LENGTH_SHORT).show()
+        loginBtn.setOnClickListener { 
+            val inputId = inputIdEdt.text.toString()
+            val inputPw = inputPwEdt.text.toString()
+            
+//            if (inputId == id && inputPw == password) {
+//                Toast.makeText(this, "관리자님 환영합니다.", Toast.LENGTH_SHORT).show()
+//            } else if (inputId != id) {
+//                Toast.makeText(this, "아이디가 잘못되었습니다.", Toast.LENGTH_SHORT).show()
+//            }
+//            else {
+//                Toast.makeText(this, "비밀번호가 잘못되었습니다.", Toast.LENGTH_SHORT).show()
+//            }
+            
+//            if (inputId == id) {
+//                if (inputPw == password) {
+//                    Toast.makeText(this, "관리자님 환영합니다.", Toast.LENGTH_SHORT).show()
+//                } else {
+//                    Toast.makeText(this, "비밀번호가 잘못되었습니다.", Toast.LENGTH_SHORT).show()
+//                }
+//            } else {
+//                Toast.makeText(this, "아이디가 잘못되었습니다.", Toast.LENGTH_SHORT).show()
+//            }
+
+            when (inputId) {
+                id -> {
+                    if (inputPw == password) {
+                        Toast.makeText(this, "관리자님 환영합니다.", Toast.LENGTH_SHORT).show()
+                    } else {
+                        Toast.makeText(this, "비밀번호가 잘못되었습니다.", Toast.LENGTH_SHORT).show()
+                    }
+                }
+                else -> {
+                    Toast.makeText(this, "아이디가 잘못되었습니다.", Toast.LENGTH_SHORT).show()
+                }
+            }
         }
     }
 }

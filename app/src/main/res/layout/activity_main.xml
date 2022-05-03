@@ -23,6 +23,7 @@
             android:scaleType="centerCrop"/>
 
         <TextView
+            android:id="@+id/idTxt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
@@ -30,11 +31,12 @@
             android:textSize="20dp"/>
 
         <EditText
+            android:id="@+id/inputIdEdt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:hint="이메일 양식"
-            android:inputType="textEmailAddress"
+            android:inputType="text"
             android:imeOptions="actionNext"
             android:maxLines="1"/>
 
@@ -46,6 +48,7 @@
             android:textSize="20dp"/>
 
         <EditText
+            android:id="@+id/inputPwEdt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
@@ -66,13 +69,6 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="40dp"
         android:orientation="horizontal">
-
-        <Button
-            android:id="@+id/signUpBtn"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="회원가입"/>
 
         <Button
             android:id="@+id/loginBtn"
